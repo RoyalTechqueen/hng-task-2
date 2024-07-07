@@ -161,15 +161,15 @@ const Cart: React.FC = () => {
     navigate(path);
   };
     return(
-        <div className="min-h-screen bg-secondary">
+        <main className="min-h-screen bg-secondary">
         <Navbar />
-        <hr className="mb-4 border-t-2 border-black" />
+        <hr className=" border-t-2 border-black" />
         <button className="text-black flex items-center gap-2" onClick={() => handleNavigate("/")}>
       <HiOutlineArrowSmallLeft />
         Back
         </button>
           <h1 className="text-2xl font-bold mb-4 text-center">My Shopping Cart</h1>  
-        <main className="bg-white max-w-4xl mx-auto p-4">
+        <div className="bg-white max-w-4xl   mx-auto p-4">
         <div>
       <div className=" hidden md:flex justify-between items-center border-b pb-4 mb-4">
         <h1 className="text-xl font-semibold">Book Details</h1>
@@ -253,8 +253,8 @@ const Cart: React.FC = () => {
         <button className="p-2 text-black rounded " onClick={() => handleNavigate("/")}>Continue Shopping</button>
       </div>
     </div>
-        </main>
-      </div>
+        </div>
+      </main>
     );
 };
 

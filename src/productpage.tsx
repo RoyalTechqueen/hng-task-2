@@ -112,7 +112,7 @@ const BookCards: React.FC<BookCardProps> = ({ title, genre, price, imageUrl }) =
       </div>
       <div className='flex items-center mt-2'>
         <p className="text-gray-800 font-medium">{price}</p>
-        <button className="ml-2 px-2 py-1 bg-blue-600 text-white rounded">Add to Cart</button>
+        <button className="ml-2 px-2 py-1 bg-primary text-white rounded">Add to Cart</button>
       </div>
     </div>
     <div className='md:hidden p-4 sm:flex flex-row items-center gap-4'>
@@ -122,7 +122,7 @@ const BookCards: React.FC<BookCardProps> = ({ title, genre, price, imageUrl }) =
         <h3 className="text-md font-semi-bold">{title}</h3>
         <p className="text-gray-600">{genre}</p>
         <p className="text-gray-800 font-medium">{price}</p>
-        <button className="ml-2 px-2 py-1 bg-primary text-white rounded">Add to Cart</button>
+        <button className="ml-2 px-2 py-1 bg-primary md:bg-primary text-white rounded">Add to Cart</button>
     </div>
     </div>
       </div>
