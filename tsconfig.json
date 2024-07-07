@@ -15,5 +15,5 @@
     "isolatedModules": true,
     "jsx": "react-jsx"
   },
-  "include": ["src", "pages/cart.tsx"]
+  "include": ["src", "src/cart.tsx"]
 }

@@ -1,7 +1,6 @@
 import React from 'react';
 import { FaSearch } from "react-icons/fa";
 import { IoCartOutline } from "react-icons/io5";
-import { HiOutlineArrowSmallLeft } from "react-icons/hi2";
 import { useState } from "react";
 import { IoMdClose } from "react-icons/io";
 import { RxHamburgerMenu } from "react-icons/rx"
@@ -66,7 +65,7 @@ const Navbar: React.FC = () => {
             <h3 className="border rounded p-2">Novels</h3>
             <h3>Educational books</h3>
           </nav>
-          <div className="text-xl font-bold">WiseReads</div>
+          <img src="../public/Books Logo.png" alt="" />
           <div className="flex items-center gap-4">
             <form className="max-w-md mx-auto">
               <label htmlFor="default-search" className="mb-2 text-sm font-medium text-gray-900 sr-only">Search</label>
@@ -100,7 +99,7 @@ interface BookCardProps {
   imageUrl: string;
 }
 
-const BookCard: React.FC<BookCardProps> = ({ title, genre, price, imageUrl }) => {
+const BookCards: React.FC<BookCardProps> = ({ title, genre, price, imageUrl }) => {
   return (
     <div>
     <div className=' hidden p-4 md:flex flex-col items-center'>
@@ -123,7 +122,7 @@ const BookCard: React.FC<BookCardProps> = ({ title, genre, price, imageUrl }) =>
         <h3 className="text-md font-semi-bold">{title}</h3>
         <p className="text-gray-600">{genre}</p>
         <p className="text-gray-800 font-medium">{price}</p>
-        <button className="ml-2 px-2 py-1 bg-blue-600 text-white rounded">Add to Cart</button>
+        <button className="ml-2 px-2 py-1 bg-primary text-white rounded">Add to Cart</button>
     </div>
     </div>
       </div>
@@ -132,217 +131,73 @@ const BookCard: React.FC<BookCardProps> = ({ title, genre, price, imageUrl }) =>
 }
 
 const books = [
-    {
-        title: 'Wilde in Love',
-        genre: 'Romance',
-        price: '₦15,000',
-        imageUrl: '../public/img1 (3).jpg',
-      },
-      {
-        title: 'Enchanting Dragon Lord',
-        genre: 'Fantasy',
-        price: '₦15,000',
-        imageUrl: '../public/img1 (3).jpg',
-      },
-      {
-        title: 'The Last Watch',
-        genre: 'Adventure',
-        price: '₦15,000',
-        imageUrl: '../public/img1 (3).jpg',
-      },
-      {
-        title: 'Enchanting Dragon Lord',
-        genre: 'Fantasy',
-        price: '₦15,000',
-        imageUrl: '../public/img1 (3).jpg',
-      },
-      {
-        title: 'Wilde in Love',
-        genre: 'Romance',
-        price: '₦15,000',
-        imageUrl: '../public/img1 (3).jpg',
-      },
-      {
-        title: 'Solar Bones',
-        genre: 'Horror',
-        price: '₦15,000',
-        imageUrl: '../public/img1 (3).jpg',
-      },
-      {
-        title: 'Jaws',
-        genre: 'Thriller',
-        price: '₦15,000',
-        imageUrl: '../public/img1 (3).jpg',
-      },
-      {
-        title: 'The Last Watch',
-        genre: 'Adventure',
-        price: '₦15,000',
-        imageUrl: '../public/img1 (3).jpg',
-      },
-      {
-        title: 'Enchanting Dragon Lord',
-        genre: 'Fantasy',
-        price: '₦15,000',
-        imageUrl: '../public/img1 (3).jpg',
-      },
-      {
-        title: 'Jaws',
-        genre: 'Thriller',
-        price: '₦15,000',
-        imageUrl: '../public/img1 (3).jpg',
-      },
-      {
-        title: 'The Last Watch',
-        genre: 'Adventure',
-        price: '₦15,000',
-        imageUrl: '../public/img1 (3).jpg',
-      },
-      {
-        title: 'Enchanting Dragon Lord',
-        genre: 'Fantasy',
-        price: '₦15,000',
-        imageUrl: '../public/img1 (3).jpg',
-      },
-      {
-        title: 'The Last Watch',
-        genre: 'Adventure',
-        price: '₦15,000',
-        imageUrl: '../public/img1 (3).jpg',
-      },
-      {
-        title: 'Enchanting Dragon Lord',
-        genre: 'Fantasy',
-        price: '₦15,000',
-        imageUrl: '../public/img1 (3).jpg',
-      },
-      {
-        title: 'Wilde in Love',
-        genre: 'Romance',
-        price: '₦15,000',
-        imageUrl: '../public/img1 (3).jpg',
-      },
-      {
-        title: 'Solar Bones',
-        genre: 'Horror',
-        price: '₦15,000',
-        imageUrl: '../public/img1 (3).jpg',
-      },
-      {
-        title: 'Jaws',
-        genre: 'Thriller',
-        price: '₦15,000',
-        imageUrl: '../public/img1 (3).jpg',
-      },
-      {
-        title: 'The Last Watch',
-        genre: 'Adventure',
-        price: '₦15,000',
-        imageUrl: '../public/img1 (3).jpg',
-      },
-      {
-        title: 'Enchanting Dragon Lord',
-        genre: 'Fantasy',
-        price: '₦15,000',
-        imageUrl: '../public/img1 (3).jpg',
-      },
-      {
-        title: 'Jaws',
-        genre: 'Thriller',
-        price: '₦15,000',
-        imageUrl: '../public/img1 (3).jpg',
-      },
-      {
-        title: 'The Last Watch',
-        genre: 'Adventure',
-        price: '₦15,000',
-        imageUrl: '../public/img1 (3).jpg',
-      },
-      {
-        title: 'Enchanting Dragon Lord',
-        genre: 'Fantasy',
-        price: '₦15,000',
-        imageUrl: '../public/img1 (3).jpg',
-      },
-      {
-        title: 'The Last Watch',
-        genre: 'Adventure',
-        price: '₦15,000',
-        imageUrl: '../public/img1 (3).jpg',
-      },
-      {
-        title: 'Enchanting Dragon Lord',
-        genre: 'Fantasy',
-        price: '₦15,000',
-        imageUrl: '../public/img1 (3).jpg',
-      },
   {
     title: 'Wilde in Love',
     genre: 'Romance',
     price: '₦15,000',
-    imageUrl: '../public/img1 (3).jpg',
+    imageUrl: '../public/img 3.jpeg',
   },
   {
     title: 'Solar Bones',
     genre: 'Horror',
     price: '₦15,000',
-    imageUrl: '../public/img1 (3).jpg',
+    imageUrl: '../public/img1.jpeg',
   },
   {
     title: 'Jaws',
     genre: 'Thriller',
     price: '₦15,000',
-    imageUrl: '../public/img1 (3).jpg',
+    imageUrl: '../public/img 2.jpeg',
   },
   {
     title: 'The Last Watch',
     genre: 'Adventure',
     price: '₦15,000',
-    imageUrl: '../public/img1 (3).jpg',
+    imageUrl: '../public/img4.jpeg',
   },
   {
     title: 'Enchanting Dragon Lord',
     genre: 'Fantasy',
     price: '₦15,000',
-    imageUrl: '../public/img1 (3).jpg',
+    imageUrl: '../public/img 5.jpeg',
   },
-  {
-    title: 'Jaws',
-    genre: 'Thriller',
-    price: '₦15,000',
-    imageUrl: '../public/img1 (3).jpg',
-  },
-  {
-    title: 'The Last Watch',
-    genre: 'Adventure',
-    price: '₦15,000',
-    imageUrl: '../public/img1 (3).jpg',
-  },
-  {
-    title: 'Enchanting Dragon Lord',
-    genre: 'Fantasy',
-    price: '₦15,000',
-    imageUrl: '../public/img1 (3).jpg',
-  },
-  {
-    title: 'The Last Watch',
-    genre: 'Adventure',
-    price: '₦15,000',
-    imageUrl: '../public/img1 (3).jpg',
-  },
-  {
-    title: 'Enchanting Dragon Lord',
-    genre: 'Fantasy',
-    price: '₦15,000',
-    imageUrl: '../public/img1 (3).jpg',
-  },
+    {
+        title: 'Spirit demon',
+        genre: 'Fantasy',
+        price: '₦15,000',
+        imageUrl: '../public/hng image 1.jpg',
+      },
+      {
+        title: 'Memory',
+        genre: 'Romance',
+        price: '₦15,000',
+        imageUrl: '../public/hng image2.jpg',
+      },
+      {
+        title: 'Harry potter',
+        genre: 'Adventure',
+        price: '₦15,000',
+        imageUrl: '../public/hng image3.jpg',
+      },
+      {
+        title: 'Thread',
+        genre: 'Horror',
+        price: '₦15,000',
+        imageUrl: '../public/hng image4.jpg',
+      },
+      {
+        title: 'Unseelie',
+        genre: 'Thriller',
+        price: '₦15,000',
+        imageUrl: '../public/hng image 5.jpg',
+      },
 ];
 
 const BookList: React.FC = () => {
   return (
     <div className="grid md:grid-cols-5 grid-cols-1 gap-4">
       {books.map((book, index) => (
-        <BookCard key={index} {...book} />
+        <BookCards key={index} {...book} />
       ))}
     </div>
   );
@@ -351,16 +206,15 @@ const BookList: React.FC = () => {
 const Filter: React.FC = () => {
   return (
     <div className="mb-4 flex justify-between items-center text-center flex-wrap">
-      <button className="text-black flex items-center gap-2">
-      <HiOutlineArrowSmallLeft />
-        Back
-        </button>
+      
       <div className='mx-auto border rounded px-2 py-1 bg-white flex items-center gap-4'>
         <select className=" px-2 py-1">
           <option>All Genres</option>
           <option>Romance</option>
           <option>Horror</option>
           <option>Thriller</option>
+          <option>Adventure</option>
+          <option>Fantasy</option>
         </select>
         <p>|</p>
         <select className="px-2 py-1">
@@ -375,7 +229,7 @@ const Filter: React.FC = () => {
 const Pagination: React.FC = () => {
   return (
     <div className="mt-4 flex justify-center items-center">
-      <button className="px-3 py-1 border rounded">1</button>
+      <button className="px-3 py-1 border rounded bg-secondary">1</button>
       <button className="ml-2 px-3 py-1 border rounded">2</button>
       <span className="ml-2">...</span>
       <button className="ml-2 px-3 py-1 border rounded">10</button>

@@ -3,7 +3,8 @@ export default {
     theme: {
       extend: {
         colors: {
-          customGold: '#3b2d3e',
+          primary: '#3B2D3E',
+          secondary: '#BBB6BD'
         }
       },
     },

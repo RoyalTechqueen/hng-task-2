@@ -2,8 +2,8 @@ import './index.css'
 import React from 'react'
 import { BrowserRouter  as Router, Routes, Route} from 'react-router-dom'
  
-import Cart from '../pages/cart'
-import Checkout from '../pages/checkout'
+import Cart from './cart'
+import Checkout from './checkout'
 import ProductPage from './productpage'
 
 const App:React.FC =() => {
